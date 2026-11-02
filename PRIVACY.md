@@ -4,51 +4,90 @@
 
 ## 1. Our Commitment
 
-K-Detect is designed around student privacy. Academic writing can contain personal, unpublished, or sensitive information. We believe users should retain control over their documents.
+Academic writing may contain personal, unpublished, or sensitive information. K-Detect aims to minimize unnecessary collection and storage of submitted documents.
 
-Our goal is to make local text processing the default wherever technically possible.
+This policy describes the current application's document-processing behavior. It does not guarantee the privacy practices of third-party hosting providers or deployment environments.
 
-## 2. Current Development Status
+## 2. Current Application Behavior
 
-K-Detect is an early-stage project.
+The current application supports TXT and DOCX uploads, as well as directly pasted text.
 
-The current prototype is designed to analyze text locally. It does not intentionally transmit submitted documents to an external AI service.
+Based on the current source code:
 
-Future versions may introduce additional models or optional online features. Any such changes must be clearly documented before release.
+- TXT and DOCX files are read for text extraction and analysis.
 
-## 3. Document Collection and Storage
+- Extracted text and analysis results are held in the application's Streamlit session state.
 
-Our intended design principles are:
+- PDF reports, annotated DOCX files, and CSV exports are generated for user download.
 
-- Do not collect academic documents for research or training without explicit consent.
-- Do not sell or share users' writing.
-- Avoid storing submitted documents beyond what is necessary for the requested analysis.
-- Provide clear information about any future storage functionality.
+- Report and document generation uses in-memory objects in the application code.
 
-## 4. Third-Party Services
+- The application does not intentionally send submitted documents to an external AI service.
 
-The project aims to avoid mandatory third-party APIs and cloud processing.
+The source code does not establish that every hosting environment processes or retains data exclusively on the user's device.
 
-If a future feature requires an external service, its data handling practices and privacy implications must be disclosed.
+## 3. Document Storage and Retention
 
-Users should not submit confidential or sensitive documents to any online service without understanding its privacy practices.
+The current document-analysis workflow does not intentionally save uploaded documents as persistent files.
 
-## 5. Open-Source Transparency
+However:
 
-K-Detect's source code is publicly available so that users and contributors can inspect how the application works.
+- Uploaded content and analysis results may remain temporarily available in application memory or session state.
 
-We encourage independent review of its privacy and security practices.
+- Runtime behavior and session retention may depend on the Streamlit deployment environment.
 
-## 6. Future Changes
+- Hosting providers may maintain their own operational logs or infrastructure records.
 
-This policy may evolve as K-Detect develops.
+K-Detect does not claim that all temporary data is immediately erased when a session ends.
 
-Any significant changes to document processing, data collection, storage, or external integrations should be reflected here.
+## 4. Third-Party Services and Hosting
 
-## 7. Contact
+The current application source does not show an intentional integration with an external AI API for document analysis.
+
+Users should distinguish between:
+
+- **Local execution:** Running the application on their own computer.
+
+- **Hosted execution:** Accessing an application deployed on a remote server or hosting platform.
+
+When using a hosted deployment, uploaded documents are processed by that deployment's server. Its hosting provider may have separate data-handling practices.
+
+Users should review the relevant hosting provider's privacy policy before submitting confidential or sensitive documents.
+
+## 5. Research Data
+
+K-Detect's research experiments use external datasets to evaluate text-classification approaches.
+
+These research datasets are separate from documents submitted by application users. User-submitted documents are not intentionally added to research datasets or used to train models.
+
+## 6. User Recommendations
+
+Users should:
+
+- Avoid uploading confidential, personally identifiable, or unpublished material to deployments they do not trust.
+
+- Run the application locally when they require greater control over document handling.
+
+- Review the source code and deployment configuration before using K-Detect with sensitive documents.
+
+## 7. Open-Source Transparency
+
+K-Detect's source code is publicly available for inspection.
+
+We welcome independent review of its document-processing, privacy, and security practices.
+
+Open-source availability does not constitute a formal security audit or guarantee the absence of vulnerabilities.
+
+## 8. Future Changes
+
+Future versions may introduce additional functionality, integrations, or storage mechanisms.
+
+Any significant changes to document processing, data collection, storage, or external services should be reflected in this policy.
+
+## 9. Contact
 
 For questions, suggestions, or privacy concerns, please open an issue in the K-Detect GitHub repository.
 
 ---
 
-**K-Detect — Your writing deserves transparency. Your data deserves privacy.**
+**K-Detect - Your writing deserves transparency. Your data deserves privacy.**

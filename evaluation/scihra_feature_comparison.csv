@@ -1,0 +1,91 @@
+target_class,feature,Human-written_percentage,AI-revised_percentage,AI-generated_percentage
+Human-written,we,86.42,81.21,86.29
+Human-written,is,98.29,99.54,99.96
+Human-written,show,32.62,7.71,21.88
+Human-written,be,82.5,75.58,85.42
+Human-written,different,17.79,6.71,9.96
+Human-written,some,15.21,3.21,4.21
+Human-written,of the,72.25,64.04,54.79
+Human-written,used,15.88,6.08,8.46
+Human-written,show that,14.04,1.46,3.38
+Human-written,are,66.38,59.46,68.58
+Human-written,important,9.79,1.42,2.58
+Human-written,xmath0,24.92,11.75,0.21
+Human-written,have,25.96,15.5,17.29
+Human-written,there,15.79,7.58,4.12
+Human-written,find,14.67,30.04,63.58
+Human-written,we show,9.58,1.21,1.04
+Human-written,found,11.38,9.17,15.21
+Human-written,new,19.08,12.0,17.96
+Human-written,in the,56.5,55.58,52.54
+Human-written,also,24.29,11.67,24.29
+Human-written,use,35.92,18.67,26.54
+Human-written,can,41.38,50.46,60.08
+Human-written,we study,5.12,0.17,0.04
+Human-written,article,16.29,13.92,10.46
+Human-written,then,8.79,3.21,3.33
+Human-written,obtained,7.42,2.83,1.92
+Human-written,it is,12.5,4.96,2.29
+Human-written,very,11.38,5.17,6.21
+Human-written,we also,6.92,0.58,0.92
+Human-written,about,9.08,3.42,5.92
+AI-revised,within,9.96,34.21,27.88
+AI-revised,additionally,0.71,15.79,12.71
+AI-revised,furthermore,2.29,13.58,9.38
+AI-revised,these,28.08,52.0,68.08
+AI-revised,within the,4.88,18.08,13.0
+AI-revised,additionally we,0.04,0.0,0.0
+AI-revised,demonstrate that,2.21,11.96,10.92
+AI-revised,investigate,9.96,20.79,31.17
+AI-revised,demonstrate,7.67,31.25,39.04
+AI-revised,this,64.46,81.92,97.25
+AI-revised,the,99.67,99.83,100.0
+AI-revised,examines,2.83,17.29,26.12
+AI-revised,study we,0.12,0.0,0.0
+AI-revised,specifically,2.12,8.0,5.88
+AI-revised,employed,1.62,7.04,4.58
+AI-revised,we demonstrate,2.46,7.96,4.29
+AI-revised,notably,0.5,7.46,7.46
+AI-revised,through,13.12,28.12,34.83
+AI-revised,approximately,0.96,5.67,3.92
+AI-revised,significant,10.88,32.54,44.75
+AI-revised,we investigate,3.38,7.58,1.83
+AI-revised,across,3.79,15.38,21.79
+AI-revised,derived,3.17,10.08,10.33
+AI-revised,we present,7.83,8.88,2.12
+AI-revised,establish,4.58,14.54,15.62
+AI-revised,demonstrated,2.08,8.04,8.54
+AI-revised,analyzed,3.75,8.25,6.62
+AI-revised,conducted,2.33,7.21,5.88
+AI-revised,effectively,1.38,6.08,5.54
+AI-revised,thereby,0.71,4.92,3.04
+AI-generated,such as,8.42,14.79,50.75
+AI-generated,including,6.21,12.83,42.04
+AI-generated,while,11.0,23.38,51.04
+AI-generated,study,23.83,43.67,80.5
+AI-generated,findings,4.46,28.58,62.54
+AI-generated,the study,4.29,11.96,40.83
+AI-generated,underscores,0.04,3.46,22.83
+AI-generated,this study,6.58,31.71,63.79
+AI-generated,work,24.54,39.21,66.25
+AI-generated,highlights,1.12,6.38,27.08
+AI-generated,such,18.67,26.75,57.21
+AI-generated,underscores the,0.0,2.88,19.92
+AI-generated,with,68.42,78.75,92.0
+AI-generated,these findings,0.58,9.17,26.62
+AI-generated,further,7.88,23.75,37.04
+AI-generated,results,23.96,18.75,45.75
+AI-generated,understanding,5.0,11.88,38.62
+AI-generated,this work,2.17,4.33,22.67
+AI-generated,broader,1.12,8.54,25.75
+AI-generated,investigates,0.96,6.0,24.96
+AI-generated,like,10.75,11.33,28.12
+AI-generated,for,83.92,85.38,97.5
+AI-generated,particularly,3.62,10.62,25.92
+AI-generated,highlights the,0.71,3.38,17.71
+AI-generated,investigates the,0.5,4.21,20.08
+AI-generated,using,21.21,27.71,52.46
+AI-generated,research,9.33,12.58,33.12
+AI-generated,potential,7.12,16.83,35.5
+AI-generated,future,2.92,3.79,19.21
+AI-generated,implications for,1.33,3.38,18.5

@@ -1,0 +1,91 @@
+class,feature,documents_containing_feature,total_documents,percentage
+Human-written,we,2074,2400,86.42
+Human-written,is,2359,2400,98.29
+Human-written,show,783,2400,32.62
+Human-written,be,1980,2400,82.5
+Human-written,different,427,2400,17.79
+Human-written,some,365,2400,15.21
+Human-written,of the,1734,2400,72.25
+Human-written,used,381,2400,15.88
+Human-written,show that,337,2400,14.04
+Human-written,are,1593,2400,66.38
+Human-written,important,235,2400,9.79
+Human-written,xmath0,598,2400,24.92
+Human-written,have,623,2400,25.96
+Human-written,there,379,2400,15.79
+Human-written,find,352,2400,14.67
+Human-written,we show,230,2400,9.58
+Human-written,found,273,2400,11.38
+Human-written,new,458,2400,19.08
+Human-written,in the,1356,2400,56.5
+Human-written,also,583,2400,24.29
+Human-written,use,862,2400,35.92
+Human-written,can,993,2400,41.38
+Human-written,we study,123,2400,5.12
+Human-written,article,391,2400,16.29
+Human-written,then,211,2400,8.79
+Human-written,obtained,178,2400,7.42
+Human-written,it is,300,2400,12.5
+Human-written,very,273,2400,11.38
+Human-written,we also,166,2400,6.92
+Human-written,about,218,2400,9.08
+AI-revised,within,821,2400,34.21
+AI-revised,additionally,379,2400,15.79
+AI-revised,furthermore,326,2400,13.58
+AI-revised,these,1248,2400,52.0
+AI-revised,within the,434,2400,18.08
+AI-revised,additionally we,0,2400,0.0
+AI-revised,demonstrate that,287,2400,11.96
+AI-revised,investigate,499,2400,20.79
+AI-revised,demonstrate,750,2400,31.25
+AI-revised,this,1966,2400,81.92
+AI-revised,the,2396,2400,99.83
+AI-revised,examines,415,2400,17.29
+AI-revised,study we,0,2400,0.0
+AI-revised,specifically,192,2400,8.0
+AI-revised,employed,169,2400,7.04
+AI-revised,we demonstrate,191,2400,7.96
+AI-revised,notably,179,2400,7.46
+AI-revised,through,675,2400,28.12
+AI-revised,approximately,136,2400,5.67
+AI-revised,significant,781,2400,32.54
+AI-revised,we investigate,182,2400,7.58
+AI-revised,across,369,2400,15.38
+AI-revised,derived,242,2400,10.08
+AI-revised,we present,213,2400,8.88
+AI-revised,establish,349,2400,14.54
+AI-revised,demonstrated,193,2400,8.04
+AI-revised,analyzed,198,2400,8.25
+AI-revised,conducted,173,2400,7.21
+AI-revised,effectively,146,2400,6.08
+AI-revised,thereby,118,2400,4.92
+AI-generated,such as,1218,2400,50.75
+AI-generated,including,1009,2400,42.04
+AI-generated,while,1225,2400,51.04
+AI-generated,study,1932,2400,80.5
+AI-generated,findings,1501,2400,62.54
+AI-generated,the study,980,2400,40.83
+AI-generated,underscores,548,2400,22.83
+AI-generated,this study,1531,2400,63.79
+AI-generated,work,1590,2400,66.25
+AI-generated,highlights,650,2400,27.08
+AI-generated,such,1373,2400,57.21
+AI-generated,underscores the,478,2400,19.92
+AI-generated,with,2208,2400,92.0
+AI-generated,these findings,639,2400,26.62
+AI-generated,further,889,2400,37.04
+AI-generated,results,1098,2400,45.75
+AI-generated,understanding,927,2400,38.62
+AI-generated,this work,544,2400,22.67
+AI-generated,broader,618,2400,25.75
+AI-generated,investigates,599,2400,24.96
+AI-generated,like,675,2400,28.12
+AI-generated,for,2340,2400,97.5
+AI-generated,particularly,622,2400,25.92
+AI-generated,highlights the,425,2400,17.71
+AI-generated,investigates the,482,2400,20.08
+AI-generated,using,1259,2400,52.46
+AI-generated,research,795,2400,33.12
+AI-generated,potential,852,2400,35.5
+AI-generated,future,461,2400,19.21
+AI-generated,implications for,444,2400,18.5

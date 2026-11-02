@@ -1,0 +1,2 @@
+comparison,observed_accuracy_difference,accuracy_difference_lower_95,accuracy_difference_upper_95,observed_macro_f1_difference,f1_difference_lower_95,f1_difference_upper_95,bootstrap_iterations
+Ensemble minus Character SVM,0.0022222222222222365,-0.005555555555555536,0.010000000000000009,0.002207505518763808,-0.00556998327596663,0.009991377160022963,5000

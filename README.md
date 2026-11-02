@@ -1,80 +1,184 @@
 # K-Detect
 
-**An open-source, privacy-first academic writing analysis and AI detection research tool.**
+**A research framework for evaluating AI-generated scientific writing detection.**
 
-K-Detect is an independent, research-driven project exploring transparent, accessible, and responsible methods for analyzing academic writing and identifying patterns commonly associated with AI-generated text.
+K-Detect is an independent research project investigating how reliably machine-learning methods distinguish human-written, AI-revised, and AI-generated scientific text.
 
-Our goal is to make useful writing-analysis tools freely accessible to students and researchers, while prioritizing privacy, transparency, and fairness.
+The project combines linguistic analysis, traditional machine-learning classifiers, and systematic evaluation to investigate detection performance, cross-dataset generalization, and robustness across different text-generation systems.
 
-## Project Vision
+K-Detect is an experimental research platform, not a definitive authorship verification system.
 
-AI-writing detection tools can produce false positives, and their reliability may vary across writing styles, language backgrounds, and academic disciplines.
+## Research Objectives
 
-K-Detect aims to explore these limitations through:
+The project focuses on:
 
-- Transparent linguistic analysis.
-- Research-based AI-text detection methods.
-- Evaluation across diverse writing backgrounds.
-- Privacy-first, local text processing.
-- Free and open-source accessibility.
+- Evaluating machine-learning approaches to AI-generated scientific text detection.
+- Comparing word-level and character-level text representations.
+- Distinguishing human-written, AI-revised, and AI-generated abstracts.
+- Investigating cross-dataset performance and generator-specific variation.
+- Measuring false positives, false negatives, and classification uncertainty.
+- Examining the limitations of automated AI-text detection.
 
-## Core Principles
+## Research Components
 
-- **Free access:** No subscription or mandatory paid API for core functionality.
-- **Privacy first:** Local processing by default, with no unnecessary collection of user documents.
-- **Transparency:** Explain the signals and limitations behind analytical results.
-- **Fairness:** Investigate false positives and performance differences across language backgrounds.
-- **Responsible use:** Never treat a detector score as proof of academic misconduct.
+### 1. Scientific Writing Classification
 
-## Development Status
+Three-class classification experiments using the SciHRA-Detect dataset:
 
-<mark>Early development — research and prototype stage.</mark>
+- **Human-generated (HGT):** Human-written scientific abstracts.
+- **AI-revised (ART):** Human-written abstracts revised using AI.
+- **AI-generated (AGT):** AI-generated scientific abstracts.
 
-The initial development phase focuses on building a transparent linguistic-analysis prototype and establishing a reliable evaluation framework.
+### 2. Machine Learning Models
 
-Planned features include:
+The experimental pipeline includes:
 
-- Academic text analysis.
-- Linguistic and statistical feature extraction.
-- AI-generated text pattern analysis.
-- Model-based detection experiments.
-- Bias and reliability evaluation.
+- TF-IDF with Logistic Regression.
+- Character-level TF-IDF with Linear Support Vector Classification.
+- Probability calibration for character-level classification.
+- Experimental probability-based ensemble evaluation.
+
+### 3. Evaluation and Robustness Analysis
+
+Experiments include:
+
+- Article-level grouped train, validation, and test splitting.
+- Accuracy, precision, recall, macro F1, and confusion-matrix analysis.
+- Bootstrap confidence intervals.
+- Paired model comparisons.
+- Feature ablation and feature-frequency analysis.
+- Scientific-domain performance analysis.
+- External evaluation using a subset of the RAID benchmark.
+- Generator-specific and decoding-condition comparisons.
+
+## Selected Experimental Findings
+
+### SciHRA-Detect
+
+On the held-out SciHRA test split:
+
+| Model | Accuracy | Macro F1 |
+|---|---:|---:|
+| TF-IDF Logistic Regression | 93.67% | 93.63% |
+| Character-level SVM | 95.78% | 95.78% |
+| Equal-weight ensemble | 96.00% | 96.00% |
+
+The ensemble's improvement over the character-level SVM was small. Paired article-level bootstrap confidence intervals included zero, so the experiments did not establish a statistically conclusive improvement.
+
+### RAID External Evaluation
+
+The trained SciHRA classifiers were evaluated on a non-adversarial subset of the RAID benchmark. This was an external evaluation subset, not the official hidden RAID test set.
+
+The results revealed substantial differences in detection performance across generators. Models that performed well on some generator families performed poorly on others.
+
+The equal-weight ensemble did not consistently improve external performance over the word-level Logistic Regression baseline.
+
+These findings highlight the difficulty of transferring AI-text detection performance across datasets and generation systems.
+
+**Important:** These results describe the specific datasets, experimental splits, and evaluation conditions used in this project. They should not be interpreted as estimates of universal real-world detection accuracy.
+
+## Application Features
+
+The Streamlit application provides an interface for academic writing analysis, including:
+
+- TXT and DOCX document input.
+- Text processing and linguistic analysis.
+- Descriptive writing statistics.
 - Downloadable analysis reports.
 
-Features will be added and documented as they become functional and are properly evaluated.
+The research classifiers and evaluation pipelines are maintained as separate experimental components. Their research results should not be confused with a validated authorship verdict from the application.
 
-## Important Disclaimer
+## Repository Structure
 
-K-Detect is an experimental research and educational tool.
+```text
+K-Detect/
+|-- app.py
+|-- config/
+|-- core/
+|-- datasets/
+|   |-- dataset documentation
+|   |-- dataset processing scripts
+|-- evaluation/
+|   |-- evaluation scripts
+|   |-- experiment logs
+|   |-- selected result summaries
+|-- models/
+|   |-- traditional/
+|   |-- ensemble/
+|-- README.md
+|-- MODEL_CARD.md
+|-- PRIVACY.md
+|-- RESPONSIBLE_USE.md
+|-- LICENSE
+|-- requirements.txt
+```
 
-AI-text detection is inherently uncertain. Its results must not be used as the sole basis for accusations, disciplinary action, or judgments about authorship.
+Raw benchmark datasets, processed datasets, and trained model artifacts are not included in the public repository. Refer to the dataset documentation and experiment logs for information about data sources, preparation, and reproducibility.
 
-A detection score does not establish whether a person used AI.
-
-## Technology
-
-Planned technologies include:
+## Technology Stack
 
 - Python
 - Streamlit
+- NumPy
+- Pandas
+- SciPy
 - Scikit-learn
-- Hugging Face Transformers
-- PyTorch
+- Joblib
+- Hugging Face Datasets
+- Python-docx
+- ReportLab
+
+## Reproducibility
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment and install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+The evaluation scripts and experiment logs document the research pipeline and experimental findings.
+
+Some experiments require separately obtaining the corresponding datasets and regenerating trained model artifacts. Third-party dataset access and redistribution are subject to their respective terms and licensing conditions.
+
+## Responsible Use
+
+AI-text detection is inherently uncertain. Performance can vary with writing style, domain, language background, generation model, and subsequent human editing.
+
+A classifier score is not proof of AI authorship or academic misconduct.
+
+K-Detect must not be used as the sole basis for accusations, disciplinary decisions, or judgments about an individual's academic integrity.
+
+See [RESPONSIBLE_USE.md](RESPONSIBLE_USE.md) for further guidance.
 
 ## Privacy
 
-Privacy is a core design principle. The project aims to process documents locally by default and avoid collecting or storing users' academic writing.
+The repository includes privacy documentation. Users should review it before using the software in any sensitive research or academic setting.
 
-See [PRIVACY.md](PRIVACY.md) for details as the policy develops.
+See [PRIVACY.md](PRIVACY.md).
 
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
-## Contributions
+## Project Status
 
-K-Detect is being developed as an open-source project. Contributions, research feedback, testing, and constructive suggestions are welcome.
+K-Detect is an independent experimental research project. Its purpose is to investigate the strengths and limitations of existing AI-text detection approaches, not to claim a universally reliable detection solution.
 
----
+Research findings, limitations, and methodological details are documented in:
 
-**Built to make academic writing analysis more transparent, accessible, and fair.**
+- `evaluation/SCIHRA_EXPERIMENT_LOG.md`
+- `evaluation/RAID_EXTERNAL_EXPERIMENT_LOG.md`
+
+**Built to make AI-generated scientific writing detection research more transparent, reproducible, and responsible.**

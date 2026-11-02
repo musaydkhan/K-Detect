@@ -1,0 +1,10 @@
+classifier_1,classifier_2,metric,observed_difference,ci_lower_95,ci_upper_95,bootstrap_positive_percentage,ci_excludes_zero
+TF-IDF Logistic Regression,Character SVM,accuracy,0.09241480490064857,0.0841780989395656,0.10053568670853498,100.0,True
+TF-IDF Logistic Regression,Character SVM,balanced_accuracy,0.09241480490064857,0.0841780989395656,0.10053568670853498,100.0,True
+TF-IDF Logistic Regression,Character SVM,f1,0.1264710110823375,0.11957796071457792,0.13321498644818489,100.0,True
+TF-IDF Logistic Regression,Equal-weight Ensemble,accuracy,0.06363893750643468,0.057191392978482525,0.07035706012560485,100.0,True
+TF-IDF Logistic Regression,Equal-weight Ensemble,balanced_accuracy,0.06363893750643468,0.057191392978482525,0.07035706012560485,100.0,True
+TF-IDF Logistic Regression,Equal-weight Ensemble,f1,0.09934459221890363,0.09372872533200417,0.1049062113566799,100.0,True
+Character SVM,Equal-weight Ensemble,accuracy,-0.028775867394213894,-0.03394966797076084,-0.023640674868732545,0.0,True
+Character SVM,Equal-weight Ensemble,balanced_accuracy,-0.028775867394213894,-0.033949667970760954,-0.023640674868732652,0.0,True
+Character SVM,Equal-weight Ensemble,f1,-0.027126418863433865,-0.030827677978162674,-0.023299999554314835,0.0,True

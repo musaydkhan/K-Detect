@@ -2,69 +2,100 @@
 
 ## 1. Purpose
 
-K-Detect is an open-source educational and research project designed to explore linguistic analysis and AI-generated text detection.
+K-Detect is an open-source educational and research project focused on linguistic analysis and the robustness evaluation of AI-generated text classification approaches.
 
-It aims to support students, educators, and researchers through transparent analysis rather than automated judgments.
+The project investigates how existing classifiers perform across human-written, AI-revised, and AI-generated scientific writing.
+
+It supports transparent research and critical evaluation, not automated judgments about individual authors.
 
 ## 2. Detection Is Not Proof
 
 AI-generated text detection is inherently imperfect.
 
-A K-Detect score must never be interpreted as definitive proof that a document was written by AI.
+A K-Detect classification or score must never be interpreted as definitive proof that a document was written or revised by AI.
 
-No student should be accused of academic misconduct solely because of an automated detection result.
+No student, researcher, or writer should be accused of academic misconduct solely because of an automated detection result.
 
 ## 3. Fairness and Linguistic Diversity
 
-K-Detect recognizes that writing styles vary across:
+Writing styles vary across:
 
 - Native and non-native English speakers.
+
 - Different educational backgrounds.
+
 - Academic disciplines.
+
 - Individual writing habits.
+
 - Different levels of English proficiency.
 
-The project aims to investigate potential biases and evaluate performance across diverse groups.
+These differences may affect automated classification.
 
-## 4. Transparency
+The project recognizes the importance of investigating potential biases and evaluating performance limitations across different datasets and writing conditions.
 
-K-Detect should explain its analytical findings wherever possible.
+## 4. Transparency and Limitations
 
-Users should be able to understand:
+K-Detect aims to document its analytical methods, evaluation procedures, and limitations.
 
-- Which linguistic features were analyzed.
-- What patterns influenced the result.
-- What the system cannot reliably determine.
-- Why a result may be incorrect.
+Research findings should distinguish between:
+
+- Human-written text.
+
+- AI-revised text.
+
+- AI-generated text.
+
+- Dataset-specific classification performance.
+
+- Performance under external evaluation conditions.
+
+Reported accuracy must always be interpreted in the context of the dataset, sampling procedure, evaluation split, and experimental conditions.
+
+Strong benchmark performance does not establish reliable real-world authorship verification.
 
 ## 5. No Academic Punishment
 
 K-Detect must not be promoted as an automated academic misconduct detector.
 
-Educational institutions and instructors should use independent evidence, appropriate academic procedures, and human judgment when evaluating authorship concerns.
+Educational institutions and instructors should rely on independent evidence, appropriate academic procedures, and human judgment when evaluating authorship concerns.
+
+Automated classification results should never replace fair assessment procedures or direct engagement with students and researchers.
 
 ## 6. Responsible Research
 
 The project aims to:
 
-- Use appropriately licensed or consented datasets.
-- Document evaluation methods.
+- Use appropriately licensed datasets and respect source-data restrictions.
+
+- Document evaluation methods and experimental conditions.
+
 - Report false positives and false negatives.
+
+- Examine performance differences across generators and datasets.
+
 - Avoid misleading accuracy claims.
-- Publish limitations alongside performance results.
+
+- Report uncertainty and statistical limitations.
+
+- Publish methodological limitations alongside performance results.
+
+Research conclusions should not extend beyond what the experiments actually support.
 
 ## 7. User Responsibility
 
-Users are responsible for interpreting results carefully and considering the limitations of automated text analysis.
+Users are responsible for interpreting analytical results carefully and considering the limitations of automated text analysis.
 
 K-Detect is intended for educational, exploratory, and research purposes.
 
+It should not be used as the sole basis for disciplinary, employment, publication, or other consequential decisions.
+
 ## 8. Our Commitment
 
-We believe technology should help students, not unfairly judge them.
+We believe technology should help students and researchers, not unfairly judge them.
 
-K-Detect will prioritize transparency, fairness, accessibility, and responsible research throughout its development.
+K-Detect prioritizes transparency, fairness, reproducibility, and responsible research throughout its development.
 
 ---
 
-**K-Detect — Analyze writing. Understand patterns. Never judge authorship blindly.**
+**K-Detect - Analyze writing. Understand patterns. Never judge authorship blindly.**
