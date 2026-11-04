@@ -1,7 +1,9 @@
 
+from pathlib import Path
 import re
 import io
 import math
+import base64
 from collections import Counter
 from xml.sax.saxutils import escape
 
@@ -65,16 +67,77 @@ st.set_page_config(
     page_icon="🔬",
     layout="wide"
 )
+# --------------------------------------------------
+# K-DETECT VISUAL THEME
+# --------------------------------------------------
 
-st.title("K-Detect")
-st.caption("Academic Writing Analysis and Linguistic Assessment")
+APP_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = APP_DIR / "assets"
+
+with open(ASSETS_DIR / "theme.css", "r", encoding="utf-8") as css_file:
+    css = css_file.read()
+
+with open(ASSETS_DIR / "kdetect_background.jpeg", "rb") as image_file:
+    background_base64 = base64.b64encode(
+        image_file.read()
+    ).decode("utf-8")
+
+css = css.replace(
+    "BACKGROUND_IMAGE_BASE64",
+    background_base64
+)
+
+st.markdown(
+    f"<style>{css}</style>",
+    unsafe_allow_html=True
+)
+
+# --------------------------------------------------
+# K-DETECT BRAND HEADER
+# --------------------------------------------------
+
+logo_col, title_col = st.columns(
+    [0.055, 0.945],
+    vertical_alignment="center",
+    gap="small"
+)
+
+with logo_col:
+    st.image(
+        str(ASSETS_DIR / "kdetect_logo.jpg"),
+        width=76
+    )
+
+with title_col:
+    st.markdown(
+        """
+        <div style="padding-top: 4px;">
+            <h1 style="
+                margin: 0;
+                color: #EAF4FF;
+                font-size: 2.5rem;
+                font-weight: 750;
+                letter-spacing: -1px;
+            ">
+                K-Detect
+            </h1>
+            <p style="
+                margin: 2px 0 0 2px;
+                color: #A7BED2;
+                font-size: 1rem;
+            ">
+                Academic Writing Analysis and Linguistic Assessment
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 st.info(
     "K-Detect is an experimental academic writing analysis tool. "
     "Its linguistic measurements are descriptive indicators, "
     "not proof of AI authorship or academic misconduct."
 )
-
 
 # --------------------------------------------------
 # TEXT PROCESSING

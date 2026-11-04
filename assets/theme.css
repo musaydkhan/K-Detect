@@ -1,0 +1,131 @@
+/* ==========================================
+   K-DETECT — DARK GLASSMORPHISM THEME
+   ========================================== */
+
+.stApp {
+    background-color: #071322;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(4, 13, 27, 0.84),
+            rgba(5, 20, 39, 0.78)
+        ),
+        url("data:image/jpeg;base64,BACKGROUND_IMAGE_BASE64");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #EAF4FF;
+}
+
+/* Main application surface */
+[data-testid="stAppViewContainer"] {
+    background: transparent;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(7, 19, 34, 0.55);
+}
+
+/* Main content spacing */
+.main .block-container {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* General typography */
+.stApp,
+.stApp p,
+.stApp label,
+.stApp span {
+    color: #EAF4FF;
+}
+
+h1, h2, h3, h4 {
+    color: #EAF4FF !important;
+    letter-spacing: -0.4px;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: #A7BED2;
+}
+
+/* Glass-style metric cards */
+[data-testid="stMetric"] {
+    background: rgba(14, 39, 65, 0.64);
+    border: 1px solid rgba(67, 207, 255, 0.22);
+    border-radius: 15px;
+    padding: 18px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* Glass-style input surfaces */
+.stTextArea textarea,
+.stTextInput input {
+    background: rgba(8, 25, 45, 0.78) !important;
+    color: #EAF4FF !important;
+    border: 1px solid rgba(67, 207, 255, 0.30) !important;
+    border-radius: 12px !important;
+}
+
+/* File uploader */
+[data-testid="stFileUploader"] {
+    background: rgba(14, 39, 65, 0.58);
+    border: 1px solid rgba(67, 207, 255, 0.28);
+    border-radius: 16px;
+    padding: 16px;
+    backdrop-filter: blur(14px);
+}
+
+/* Buttons */
+.stButton button,
+.stDownloadButton button {
+    border-radius: 10px;
+    border: 1px solid rgba(67, 207, 255, 0.48);
+    transition: all 0.2s ease;
+}
+
+.stButton button[kind="primary"],
+.stDownloadButton button[kind="primary"] {
+    background: linear-gradient(110deg, #087EAD, #2865D9);
+    color: white;
+}
+
+/* Tables */
+[data-testid="stDataFrame"] {
+    background: rgba(10, 29, 50, 0.76);
+    border: 1px solid rgba(67, 207, 255, 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    background: rgba(14, 39, 65, 0.58);
+    border: 1px solid rgba(67, 207, 255, 0.20);
+    border-radius: 12px;
+}
+
+/* Alerts and notices */
+[data-testid="stAlert"] {
+    background: rgba(14, 39, 65, 0.72);
+    border-radius: 12px;
+    border: 1px solid rgba(67, 207, 255, 0.20);
+}
+
+/* Dividers */
+hr {
+    border-color: rgba(67, 207, 255, 0.20);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: 1.2rem 1rem 2rem;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 12px;
+    }
+}
