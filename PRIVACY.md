@@ -91,3 +91,8 @@ For questions, suggestions, or privacy concerns, please open an issue in the K-D
 ---
 
 **K-Detect - Your writing deserves transparency. Your data deserves privacy.**
+
+## Update, November 2026
+- No accounts. Text is processed in memory and is not stored by K-Detect.
+- The similarity check sends short phrases (about nine words each) from the text to OpenAlex, Europe PMC, arXiv and, if enabled, Brave Search.
+  Those services have their own privacy policies.

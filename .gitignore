@@ -1,71 +1,20 @@
-# Python
-__pycache__/
-*.py[codz]
-*$py.class
-*.so
-*.egg-info/
-build/
-dist/
-
-# Virtual environments
+# environments and caches
 .venv/
 venv/
-env/
-ENV/
-
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
-.streamlit/secrets.toml
-*.pem
-*.key
-
-# IDE and editor
-.idea/
-.vscode/
-.spyderproject
-.spyproject
-
-# Testing and caches
+__pycache__/
+*.pyc
 .pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.tox/
-.nox/
-.mypy_cache/
-.ruff_cache/
-.hypothesis/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Temporary files
-tempCodeRunnerFile.py
-*.tmp
-*.bak
-*.log
-
-# Local datasets and downloaded benchmarks
+.devcontainer/
+# secrets: never commit keys
+.env
+.streamlit/secrets.toml
+# raw / processed research data (large, license-restricted)
 datasets/raw/
-datasets/external/
-datasets/downloads/
 datasets/processed/
-
-# Large generated evaluation outputs
-evaluation/*predictions*.csv
-evaluation/*near_duplicates*.csv
-
-# Locally generated model artifacts
+# big training artifacts (the two runtime models in models/runtime/ ARE tracked)
 models/artifacts/
-models/checkpoints/
-
-# Generated reports
-reports/generated/
-reports/*.pdf
-
-# OS files
+evaluation/*predictions*.csv
+# private notes and backups
+DEVELOPMENT_LOG.md
+app_pre_redesign_backup.py
 .DS_Store
-Thumbs.db
-desktop.ini

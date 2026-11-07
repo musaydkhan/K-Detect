@@ -275,3 +275,10 @@ Performance claims should be accompanied by reproducible experimental evidence a
 ---
 
 **K-Detect — Scientific transparency before detection claims.**
+
+## Update, November 2026 (web app remodel)
+- The app scores ~80-word passages with the word TF-IDF logistic regression only. On the external RAID subset, a 50/50 blend with the
+  character SVM was worse (recall at 5% false positives on GPT-4: 76% vs 97%).
+- Flag threshold 0.65, "possible" 0.50, chosen on SciHRA validation passages (about 2% of human passages flagged on the test split).
+- Distinguishing AI-edited from AI-generated passages is only about 73% accurate; treat the two colours as a rough guide.
+- Newer generators (for example Claude, Gemini) were not evaluated.

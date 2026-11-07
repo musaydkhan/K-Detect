@@ -1,0 +1,61 @@
+{
+ "model": "word TF-IDF logistic regression (the model K-Detect scores with)",
+ "false_positive_rate": 0.051,
+ "rows": [
+  {
+   "generator": "gpt4",
+   "recall": 0.97,
+   "auc": 0.99
+  },
+  {
+   "generator": "mpt-chat",
+   "recall": 0.85,
+   "auc": 0.96
+  },
+  {
+   "generator": "chatgpt",
+   "recall": 0.76,
+   "auc": 0.95
+  },
+  {
+   "generator": "llama-chat",
+   "recall": 0.41,
+   "auc": 0.81
+  },
+  {
+   "generator": "mistral-chat",
+   "recall": 0.35,
+   "auc": 0.76
+  },
+  {
+   "generator": "cohere-chat",
+   "recall": 0.23,
+   "auc": 0.66
+  },
+  {
+   "generator": "cohere",
+   "recall": 0.11,
+   "auc": 0.57
+  },
+  {
+   "generator": "gpt2",
+   "recall": 0.04,
+   "auc": 0.35
+  },
+  {
+   "generator": "mistral",
+   "recall": 0.02,
+   "auc": 0.34
+  },
+  {
+   "generator": "mpt",
+   "recall": 0.02,
+   "auc": 0.31
+  },
+  {
+   "generator": "gpt3",
+   "recall": 0.02,
+   "auc": 0.32
+  }
+ ]
+}
